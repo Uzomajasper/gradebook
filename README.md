@@ -39,13 +39,13 @@ An app for calculating a student's grade from their assessment scores: total, av
 
 ## Expected input / output
 
-| Action | Input | Output |
-|---|---|---|
-| Valid record | Name: `"Chidi"`, Scores: `70, 65, 80` | Card shows Total: 215, Average: 71.7, Grade: A, status: PASS |
-| Missing name | Name blank, scores filled | Error: *"Please enter the student's name."* Nothing saved |
-| Too few scores | Only 2 scores entered | Error: *"Enter at least three assessment scores."* Nothing saved |
-| Out-of-range score | Score: `150` | Error: *"Scores must be between 0 and 100."* Nothing saved |
-| Failing average | Scores: `30, 25, 40` | Card shows Grade: F, status: FAIL (styled in red) |
+| Action             | Input                                 | Output                                                           |
+| ------------------ | ------------------------------------- | ---------------------------------------------------------------- |
+| Valid record       | Name: `"Chidi"`, Scores: `70, 65, 80` | Card shows Total: 215, Average: 71.7, Grade: A, status: PASS     |
+| Missing name       | Name blank, scores filled             | Error: _"Please enter the student's name."_ Nothing saved        |
+| Too few scores     | Only 2 scores entered                 | Error: _"Enter at least three assessment scores."_ Nothing saved |
+| Out-of-range score | Score: `150`                          | Error: _"Scores must be between 0 and 100."_ Nothing saved       |
+| Failing average    | Scores: `30, 25, 40`                  | Card shows Grade: F, status: FAIL (styled in red)                |
 
 ## How to run
 
