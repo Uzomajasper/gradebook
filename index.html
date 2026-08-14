@@ -1,48 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gradebook — Grade Calculator</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header>
-  <h1>Gradebook</h1>
-  <div class="sub">enter scores, get the grade — no chalk dust required</div>
-</header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradebook — Grade Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Gradebook</h1>
+      <div class="sub">enter scores, get the grade — no chalk dust required</div>
+    </header>
 
-<div class="wrap">
-  <div class="panel">
-    <h2>New record</h2>
-    <form id="grade-form">
-      <div class="field">
-        <label for="name-input">Student name</label>
-        <input type="text" id="name-input" maxlength="60" autocomplete="off">
+    <div class="wrap">
+      <div class="panel">
+        <h2>New record</h2>
+        <form id="grade-form">
+          <div class="field">
+            <label for="name-input">Student name</label>
+            <input type="text" id="name-input" maxlength="60" autocomplete="off" />
+          </div>
+          <label>Assessment scores (out of 100 each)</label>
+          <div class="scores-row" id="scores-row">
+            <input type="number" class="score-input" min="0" max="100" placeholder="Score 1" />
+            <input type="number" class="score-input" min="0" max="100" placeholder="Score 2" />
+            <input type="number" class="score-input" min="0" max="100" placeholder="Score 3" />
+          </div>
+          <div class="add-score-row">
+            <button type="button" id="add-score-btn">+ Add another score</button>
+          </div>
+          <div class="error" id="error-msg"></div>
+          <button type="submit" class="submit-btn">Calculate & save</button>
+        </form>
       </div>
-      <label>Assessment scores (out of 100 each)</label>
-      <div class="scores-row" id="scores-row">
-        <input type="number" class="score-input" min="0" max="100" placeholder="Score 1">
-        <input type="number" class="score-input" min="0" max="100" placeholder="Score 2">
-        <input type="number" class="score-input" min="0" max="100" placeholder="Score 3">
-      </div>
-      <div class="add-score-row">
-        <button type="button" id="add-score-btn">+ Add another score</button>
-      </div>
-      <div class="error" id="error-msg"></div>
-      <button type="submit" class="submit-btn">Calculate & save</button>
-    </form>
-  </div>
 
-  <div class="panel">
-    <h2>Student records</h2>
-    <div id="records-list"></div>
-    <div class="empty" id="empty-state">No records yet. Enter a student's scores above.</div>
-  </div>
-</div>
+      <div class="panel">
+        <h2>Student records</h2>
+        <div id="records-list"></div>
+        <div class="empty" id="empty-state">No records yet. Enter a student's scores above.</div>
+      </div>
+    </div>
 
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
